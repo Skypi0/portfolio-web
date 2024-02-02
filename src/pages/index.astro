@@ -1,8 +1,55 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialBadge from "../components/SocialBadge.astro";
+import GitHubIcon from "../../public/icons/GitHub.astro";
+import LinkedInIcon from "../../public/icons/LinkedIn.astro";
+import XIcon from "../../public/icons/XIcon.astro";
+import MailIcon from "../../public/icons/Mail.astro"
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Luis Soto - Desarrollador y programador web" description="Contactame para crear tu aplicacion web o movil.">
+	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-44 px-10">
+			<img
+				class="rounded-full h-12 w-12 mb-4"
+				src="https://avatars.githubusercontent.com/u/145503060?v=4"
+				alt="Luis' Photo"
+			/>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4">
+				Hey! I'm PaCoDev
+				<a
+					class="flex justify-center items-center"
+					href="https://www.linkedin.com/in/luis-soto-open-to-work"
+					target="_blank"
+					rel="noopener"
+				>
+					<Badge>Open to Work</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl text-wrap text-violet-300 opacity-80">
+				Front-End Developer based in CDMX, Mexico 🇲🇽. I specialize in UI
+				Design, responsive web design and visual development.
+			</h2>
 
+			<nav class="flex justify-center items-center flex-row mt-10 gap-16">
+				<SocialBadge href="https://github.com/Skypi0">
+					<GitHubIcon class="w-6 h-6" />
+					<span>GitHub</span>
+				</SocialBadge>
+				<SocialBadge href="https://www.linkedin.com/in/luis-soto-open-to-work">
+					<LinkedInIcon class="w-6 h-6" />
+					<span>LinkedIn</span>
+				</SocialBadge>
+				<SocialBadge href="https://twitter.com/PAC0D3V">
+					<XIcon class="w-6 h-6" />
+					<span>X</span>
+				</SocialBadge>
+				<SocialBadge> 
+					<MailIcon class="w-6 h-6"/>
+					<span>Gmail</span>
+				</SocialBadge>
+			</nav>
+		</section>
+	</main>
 </Layout>
