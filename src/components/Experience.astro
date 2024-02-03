@@ -1,0 +1,34 @@
+---
+import ExperienceItem from '../components/ExperienceItem.astro'
+const EXPERIENCE = [
+    {
+        date:'February 2018',
+        title:'Web developer at Grupo Roma',
+        description:`As a web developer, I designed and developed new modules for company's website`,
+        link:'https://github.com/Skypi0',
+    },
+    {
+        date:'August 2020',
+        title:'Data Base Administrator at UPT',
+        description:'I managed an mantained scalable databases',
+        link:'#',
+    },
+    {
+        date:'July 2021',
+        title:'Web Developer at Evicomm',
+        description:'I designed an developed a web site for the company ',
+        link:'#',
+    }
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem { ... experience}/>
+            </li>
+        ))
+    }
+</ol>

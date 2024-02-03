@@ -5,12 +5,18 @@ import SocialBadge from "../components/SocialBadge.astro";
 import GitHubIcon from "../../public/icons/GitHub.astro";
 import LinkedInIcon from "../../public/icons/LinkedIn.astro";
 import XIcon from "../../public/icons/XIcon.astro";
-import MailIcon from "../../public/icons/Mail.astro"
+import MailIcon from "../../public/icons/Mail.astro";
+import BriefCase from "../../public/icons/BriefCase.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout title="PAC0D3V - Desarrollador y programador web." description="Contactame para crear tu aplicacion web o movil.">
+<Layout
+	title="PAC0D3V - Desarrollador y programador web."
+	description="Contactame para crear tu aplicacion web o movil."
+>
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44 px-10">
+		<SectionContainer class="py-44 pb-28">
 			<img
 				class="rounded-full size-12 mb-4"
 				src="https://avatars.githubusercontent.com/u/145503060?v=4"
@@ -31,13 +37,14 @@ import MailIcon from "../../public/icons/Mail.astro"
 				Front-End Developer based in CDMX, Mexico 🇲🇽. I specialize in UI
 				Design, responsive web design and visual development.
 			</h2>
-
 			<nav class="flex justify-center items-center flex-row mt-10 gap-16">
 				<SocialBadge href="https://github.com/Skypi0">
 					<GitHubIcon class="size-6" />
 					<span>GitHub</span>
 				</SocialBadge>
-				<SocialBadge href="https://www.linkedin.com/in/luis-soto-open-to-work">
+				<SocialBadge
+					href="https://www.linkedin.com/in/luis-soto-open-to-work"
+				>
 					<LinkedInIcon class="size-6" />
 					<span>LinkedIn</span>
 				</SocialBadge>
@@ -45,11 +52,18 @@ import MailIcon from "../../public/icons/Mail.astro"
 					<XIcon class="size-6" />
 					<span>X</span>
 				</SocialBadge>
-				<SocialBadge> 
-					<MailIcon class="size-6"/>
+				<SocialBadge>
+					<MailIcon class="size-6" />
 					<span>Gmail</span>
 				</SocialBadge>
 			</nav>
-		</section>
+		</SectionContainer>
+		<SectionContainer>
+			<div class="flex flex-row items-center gap-x-2 pb-2">
+				<BriefCase class="size-8" />
+				<h2 class="text-2xl font-semibold">Experiencia Laboral</h2>
+			</div>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
